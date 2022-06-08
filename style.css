@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 *{
     box-sizing: border-box;
     
@@ -10,7 +11,66 @@ body{
     margin: 0;
     overflow: hidden;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.container{
+    display: flex;
+    width: 90vw;
+}
+.panel{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 70vh;
+    border-radius: 50px;
+    color: #fff;
+    position: relative;
+    flex: .5;
+    cursor: pointer;
+    margin: 10px;  
+    transition: flex .7s ease-in;
+}
+
+.panel h3{
+    font-size: 24px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+    opacity: 0;
+}
+
+.panel.active h3{
+    opacity: 1;
+    transition: opacity .3s ease-in .4s;
+}
+
+.panel.active{
+    flex: 5;
+}
+@media(max-width:600px) {
+    .container{
+        width: 100vw;
+    }
+    .panel:nth-of-type(4),.panel:nth-of-type(5){
+        display: none;
+    }
+}
+
+.panel--1{
+    background-image: url("images/client-wearing-fashion-clothes-thumbs-up.jpg");
+}
+.panel--2{
+    background-image: url("images/excited-white-girl-bright-stylish-glasses-posing-pink-dreamy-curly-woman-playing-with-her-ginger-hair-laughing.jpg");
+}
+.panel--3{
+    background-image: url("images/fashion-model-with-beautiful-face-perfect-body-wearing-trendy-dress-holding-brown-leather-hand-bag-full-length.jpg");
+}
+.panel--4{
+    background-image: url("images/perky-girl-stylish-glasses-stares-amazement-walking-pink-wall-brunette-culottes-orange-blouse-posing-with-red-handbag.jpg");
+}
+.panel--5{
+    background-image: url("images/stylish-european-brunette-woman-red-coat-black-hat-posing-white-wall.jpg");
 }
